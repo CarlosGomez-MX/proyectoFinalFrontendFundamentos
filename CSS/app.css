@@ -1,20 +1,19 @@
 /* Clases para fuentes importadas */
 
 .playfair {
-  font-family: "Playfair", serif;
-  font-optical-sizing: auto;
-  font-weight: 1px;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+    font-family: "Playfair", serif;
+    font-optical-sizing: auto;
+    font-weight: 1px;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
 .raleway {
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
-
 
 .textoAzul {
     color: #037bc0; /* Azul */
@@ -24,7 +23,7 @@ body {
     font-family: "raleway";
     margin: 0;
     padding: 0;
-    text-align: center;
+    text-align: center; 
 }
 
 h2, h3 {
@@ -33,41 +32,75 @@ h2, h3 {
     font-family: "playfair";
 }
 
-
-.nav-principal {
-    background-color: #037bc0;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-    border-radius: 10px;
+header {
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    padding-bottom: 0;
 }
 
-.nav-principal ul {
-    list-style: none; /* Elimina viñetas */
-    margin: 0;
-    padding: 0;
-    display: flex; /* Habilita Flexbox para alinear elementos horizontalmente */
-    justify-content: center; /* Centra los ítems de navegación horizontalmente */
-    align-items: center; /* Centra los ítems verticalmente si el nav-principal tiene una altura fija */
+.navbar-brand {
+    background-color: white; 
+    width: 100%; /* Para que ocupe todo el ancho y se vea el fondo blanco */
+    padding: 15px 0 10px 0; /* Padding para el nombre de la tienda */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra debajo del nombre de la tienda */
+    margin-bottom: 0; 
 }
 
-.nav-principal ul li {
-    margin: 0 20px;
+/* Estilos para el título de la marca dentro del área blanca */
+.navbar-brand h2 {
+    font-size: 2.5em;
+    margin-bottom: 0;
+    color: #333333; 
 }
 
-.nav-principal ul li a {
-    background-color: #037bc0;
-    text-decoration: none; /* Elimina el subrayado */
+
+.navbar-brand h2 .textoAzul {
+    color: #037bc0;
+}
+
+header .navbar {
+    background-color: #037bc0; 
+    padding: 10px 0; /* Padding del navbar azul */
+    border-radius: 0;
+    box-shadow: none; 
+    margin-top: 0; 
+}
+
+.navbar .container-fluid {
+    flex-direction: column; /* Por defecto, apila en columna (para escritorio) */
+    align-items: center; /* Centra los items horizontalmente */
+}
+
+.navbar-nav .nav-link {
     color: white;
     font-weight: bold;
-    font-size: 1.2em; /*Incrementa el tamaño de fuente comparado contra el tamanño del contenedor para mejorar visibilidad */
+    font-size: 1.2em;
     padding: 8px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
-    display: block; /* Hace que el enlace ocupe todo el espacio para el hover */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-principal ul li a:hover {
+.navbar-nav .nav-link:hover {
     background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente blanco al pasar el ratón */
+    color: white; 
+}
+
+/* Estilo para el icono de hamburguesa de Bootstrap (blanco para contraste con fondo azul del menú) */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Ajuste del color del borde del botón de hamburguesa cuando está abierto/activo */
+.navbar-toggler {
+    border-color: rgba(255,255,255,0.5); /* Borde blanco semi-transparente */
+    margin-top: 10px;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Transición para el hover */
+}
+
+.navbar-toggler:hover {
+    background-color: #888888; /* Fondo gris al pasar el ratón */
+    border-color: #888888; /* Borde gris al pasar el ratón */
 }
 
 
@@ -162,121 +195,223 @@ button:hover {
     color: #333333;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    /* Sobrescribe el SVG de Bootstrap y cambia el color de la flecha a blanco (#fff) */
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+/* Color de las flechas del carrusel a gris */
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23888888'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
 }
 
 .carousel-control-next-icon {
-    /* El icono de la flecha "siguiente" (también en blanco) */
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23888888'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
+/* FIN DEL CAMBIO */
 
 /* Estilos para los botones de control del carrusel (la zona clicable que contiene la flecha) */
 .carousel-control-prev,
 .carousel-control-next {
-    position: absolute; /* Asegura que el posicionamiento sea absoluto respecto al .carousel */
-    top: 50%; /* Centra verticalmente en el carrusel */
-    transform: translateY(-50%); /* Ajuste fino para centrado vertical */
-    z-index: 1; /* Asegura que estén por encima de las imágenes */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
 
-    background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente oscuro */
-    width: 50px; /* Ancho del botón */
-    height: 50px; /* Alto del botón */
-    border-radius: 50%; /* Los hace redondos */
-    display: flex; /* Para centrar la flecha dentro del botón */
-    justify-content: center; /* Centra horizontalmente el icono */
-    align-items: center; /* Centra verticalmente el icono */
-    opacity: 0.7; /* Ligeramente transparentes por defecto */
-    transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Transición suave para el hover */
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 /* Posicionamiento horizontal específico para cada botón */
 .carousel-control-prev {
-    left: 15px; /* Margen desde el lado izquierdo del carrusel */
+    left: 15px;
 }
 
 .carousel-control-next {
-    right: 15px; /* Margen desde el lado derecho del carrusel */
+    right: 15px;
 }
 
 /* Efecto hover para los botones de control del carrusel */
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-    opacity: 1; /* Se vuelven completamente opacos al pasar el ratón */
-    background-color: rgba(0, 0, 0, 0.6); /* El fondo se hace un poco más oscuro al pasar el ratón */
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
+/* Ajuste del padding del carousel-caption */
 .carousel-caption {
-    background-color: rgba(255, 255, 255, 0.4); /* Fondo blanco con 70% de opacidad */
-    padding: 1px; /* Relleno alrededor del texto para que el fondo se vea bien */
-    border-radius: 5px; /* Bordes ligeramente redondeados para el fondo */
-    
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 15px;
+    border-radius: 5px;
 }
-/* Estilos para el texto dentro del carousel-caption */
+
 .carousel-caption h5,
 .carousel-caption p {
-    color: #555555; /* Cambia el color del texto a darkgray */
- 
+    color: #333333;
 }
 
-.carousel-caption h5
-{
-    font-family: "playfair"; 
+.carousel-caption h5 {
+    font-family: "playfair";
 }
-
-
 
 footer {
-    text-align: center; /* Centra horizontalmente todo el texto y contenido en línea */
-    padding: 20px 0; /* Relleno vertical para el footer */
+    text-align: center;
+    padding: 20px 0;
     background-color: #FFFFFF;
     border-top: 1px solid #ccc;
     margin-top: 40px;
 }
 
-/* Estilos para las listas de navegación dentro del footer */
 footer nav ul {
-    list-style: none; /* Elimina viñetas */
-    padding: 0; /* Elimina padding por defecto */
-    margin: 0; /* Elimina margen por defecto */
-    /* Si quieres que las columnas del footer sigan siendo flexbox, no añadas display: flex aquí,
-       ya que esto aplica al UL, no al LI. Los LI se alinean por el contenedorColumna flex. */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-
 
 footer nav ul li {
-    margin-bottom: 5px; /* Pequeño espacio entre cada elemento de la lista */
+    margin-bottom: 5px;
 }
-
 
 footer nav ul li a {
-    text-decoration: none; /* Elimina el subrayado por defecto */
-    color: #333; 
-    display: block; /* Hace que el área clicable ocupe todo el ancho del li */
-    padding: 2px 0; /* Pequeño padding vertical para mejor área de clic */
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 2px 0;
 }
-
 
 footer nav ul li a:hover {
     color: #037bc0;
 }
 
-
 footer small {
     color: #555;
-    display: block; /* Para que el texto ocupe su propia línea si es necesario */
+    display: block;
     margin-top: 20px;
 }
 
-
 footer small a {
-    text-decoration: none; /*Elimina el subrayado */
+    text-decoration: none;
     color: #555;
-    transition: color 0.2s ease-in-out; /* Transición suave para el hover */
+    transition: color 0.2s ease-in-out;
 }
 
 footer small a:hover {
-    color: #037bc0;  
+    color: #037bc0;
+}
+
+
+/* ========================================= */
+/* Media Queries para Diseños Responsivos    */
+/* ========================================= */
+
+/* ------------------------------------------- */
+/* Pantallas medianas y pequeñas (Tablets y Móviles)
+   Se aplicará cuando el ancho de la pantalla sea 768px o menos
+---------------------------------------------- */
+@media screen and (max-width: 768px) {
+    /* Ajustes generales */
+    body {
+        font-size: 15px;
+    }
+
+    /* En móvil, el container-fluid del navbar vuelve a ser flex-row para que el botón de hamburguesa esté al lado del logo */
+    .navbar .container-fluid {
+        flex-direction: row; /* Vuelve a fila para móvil */
+        justify-content: space-between; /* Espacia el logo y el botón */
+        align-items: center; /* Centra verticalmente */
+    }
+
+    /* Se ajusta el margen inferior del navbar-brand en pantallas pequeñas */
+    .navbar-brand {
+        margin-bottom: 0 !important;
+        padding: 10px 0; /* Ajustamos el padding en móvil */
+    }
+    /* Ajuste para el título de la marca en Navbar de Bootstrap en móvil */
+    .navbar-brand h2 {
+        font-size: 1.3em; /* Se reduce el tamaño para móviles */
+    }
+
+    /* Contenedores de Fila (productos, categorías) */
+    .contenedorFila {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .contenedorColumna {
+        width: 90%;
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+
+    .contenedorColumna img {
+        height: auto;
+        max-height: 200px;
+    }
+
+    .divDetalleProducto {
+        padding: 10px;
+    }
+
+    .divDetalleProducto h3 {
+        font-size: 1.2em;
+    }
+
+    .divDetalleProducto p {
+        font-size: 0.9em;
+    }
+
+    /* Carrusel */
+    .carousel-item img {
+        height: 40vh;
+    }
+
+    .carousel-caption {
+        font-size: 0.9em;
+        padding: 5px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.2em;
+    }
+
+    .carousel-caption p {
+        font-size: 0.8em;
+    }
+
+    /* Footer */
+    footer .contenedorFila {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .contenedorColumna {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    footer nav ul {
+        display: block;
+    }
+}
+
+/* ------------------------------------------- */
+/* Pantallas muy pequeñas (Smartphones típicos)
+   Se aplicará cuando el ancho de la pantalla sea 480px o menos
+---------------------------------------------- */
+@media screen and (max-width: 480px) {
+    
+    body {
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    .carousel-item img {
+        height: 30vh;
+    }
 }
