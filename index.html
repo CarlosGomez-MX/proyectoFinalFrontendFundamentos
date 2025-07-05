@@ -1,117 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patrik Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="CSS/app.css">
 </head>
 
 <body>
     <header>
-        <div class="descripcionProductos">
-            <h2>Tienda de muebles</h2>
-        </div>
+        <span class="descripcionProductos">
+            <h2>Tienda de <span class="textoAzul">Muebles</span> de Patrik</h2>
+        </span>
         <nav class="nav-principal">
             <div class="descripcionProductos">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Tienda</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Galeria</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Tienda</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Galeria</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
             </div>
         </nav>
     </header>
-    <div>
-        <img src="Images/principal.jpg" alt="Muebles de madera">
+
+    <div class="container-fluid">
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="Images/categoria1.jpg" class="d-block w-100" alt="Categoria 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Categoria 1</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nisi molestias quasi nam
+                            necessitatibus laudantium iste similique</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="Images/categoria2.jpg" class="d-block w-100" alt="Categoria 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Categoria 2</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nisi molestias quasi nam
+                            necessitatibus laudantium iste similique</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="Images/categoria3.jpg" class="d-block w-100" alt="Categoria 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Categoria 3</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nisi molestias quasi nam
+                            necessitatibus laudantium iste similique</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previo</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
     </div>
+
+    <br>
+    <hr>
+
     <main>
         <h2>Nuestros productos</h2>
-        <div>
-            <img src="Images/producto1.jpg" alt="Silla de madera">
+
+        <div class="contenedorFila">
+            <div class="contenedorColumna">
+                <img src="Images/producto1.jpg" alt="Producto 1">
+            </div>
+            <div class="contenedorColumna">
+                <div class="divDetalleProducto">
+                    <h3>Producto 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima tempore dolorum nesciunt, ea
+                        repudiandae animi? Modi quisquam, veritatis vel nemo ipsam corporis repellendus error laboriosam
+                        deserunt suscipit est. Dolor, molestiae?</p>
+                    <br>
+                    <label><strong>$12,000.00</strong></label>
+                    <br>
+                    <button>Agregar al carrito</button>
+                </div>
+            </div>
         </div>
-        <div class="descripcionProductos">
-            <article>   
-                <h3>Silla de madera</h3>
-                <p>Hecha a mano con madera de alta calidad, perfecta para cualquier ambiente.</p>
-                <p>Precio: $50</p>
-                <button>Comprar</button>
-            </article>
+
+        <div class="contenedorFila">
+            <div class="contenedorColumna">
+                <img src="Images/producto2.jpg" alt="Producto 2" width="100%" height="250px">
+                <div class="divDetalleProducto">
+                    <h3>Producto 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima tempore dolorum nesciunt, ea
+                        repudiandae animi? Modi quisquam, veritatis vel nemo ipsam corporis repellendus error laboriosam
+                        deserunt suscipit est. Dolor, molestiae?</p>
+                    <br>
+                    <label><strong>$12,000.00</strong></label>
+                    <br>
+                    <button>Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="contenedorColumna">
+                <img src="Images/producto3.jpg" alt="Producto 3" width="100%" height="250px">
+                <div class="divDetalleProducto">
+                    <h3>Producto 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima tempore dolorum nesciunt, ea
+                        repudiandae animi? Modi quisquam, veritatis vel nemo ipsam corporis repellendus error laboriosam
+                        deserunt suscipit est. Dolor, molestiae?</p>
+                    <br>
+                    <label><strong>$12,000.00</strong></label>
+                    <br>
+                    <button>Agregar al carrito</button>
+                </div>
+            </div>
         </div>
-        <div>
-            <img src="Images/producto2.jpg" alt="Silla de madera">
+
+        <div class="contenedorFila">
+            <div class="contenedorColumna">
+                <img src="Images/producto4.jpg" alt="Producto 4" height="250px" width="100%">
+                <div class="divDetalleProducto">
+                    <h3>Producto 4</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima tempore dolorum nesciunt, ea
+                        repudiandae animi? Modi quisquam, veritatis vel nemo ipsam corporis repellendus error laboriosam
+                        deserunt suscipit est. Dolor, molestiae?</p>
+                    <br>
+                    <label><strong>$12,000.00</strong></label>
+                    <br>
+                    <button>Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="contenedorColumna">
+                <img src="Images/producto5.jpg" alt="Producto 5" height="250px" width="100%">
+                <div class="divDetalleProducto">
+                    <h3>Producto 5</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima tempore dolorum nesciunt, ea
+                        repudiandae animi? Modi quisquam, veritatis vel nemo ipsam corporis repellendus error laboriosam
+                        deserunt suscipit est. Dolor, molestiae?</p>
+                    <br>
+                    <label><strong>$12,000.00</strong></label>
+                    <br>
+                    <button>Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="contenedorColumna">
+                <img src="Images/producto6.jpg" alt="Producto 6" height="250px" width="100%">
+                <div class="divDetalleProducto">
+                    <h3>Producto 6</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima tempore dolorum nesciunt, ea
+                        repudiandae animi? Modi quisquam, veritatis vel nemo ipsam corporis repellendus error laboriosam
+                        deserunt suscipit est. Dolor, molestiae?</p>
+                    <br>
+                    <label><strong>$12,000.00</strong></label>
+                    <br>
+                    <button>Agregar al carrito</button>
+                </div>
+            </div>
         </div>
-        <div class="descripcionProductos">
-            <article>
-                <h3>Silla de madera</h3>
-                <p>Hecha a mano con madera de alta calidad, perfecta para cualquier ambiente.</p>
-                <p>Precio: $50</p>
-                <button>Comprar</button>
-            </article>
+        <br>
+        <hr>
+
+        <h2>Categorias de productos</h2>
+
+        <div class="contenedorFila">
+            <div class="contenedorColumna">
+                <img src="Images/categoria1.jpg" alt="Producto 4" height="250px" width="100%">
+                <h3>Oficina</h3>
+            </div>
+            <div class="contenedorColumna">
+                <img src="Images/categoria2.jpg" alt="Producto 4" height="250px" width="100%">
+                <h3>Hogar</h3>
+            </div>
+            <div class="contenedorColumna">
+                <img src="Images/categoria3.jpg" alt="Producto 4" height="250px" width="100%">
+                <h3>Cocina</h3>
+            </div>
         </div>
-        <div>
-            <img src="Images/producto3.jpg" alt="Silla de madera">
-        </div>
-        <div class="descripcionProductos">
-            <article>
-                <h3>Silla de madera</h3>
-                <p>Hecha a mano con madera de alta calidad, perfecta para cualquier ambiente.</p>
-                <p>Precio: $50</p>
-                <button>Comprar</button>
-            </article>
-        </div>
-        <div>
-            <img src="Images/producto4.jpg" alt="Silla de madera">
-        </div>
-        <div class="descripcionProductos">
-            <article>
-                <h3>Silla de madera</h3>
-                <p>Hecha a mano con madera de alta calidad, perfecta para cualquier ambiente.</p>
-                <p>Precio: $50</p>
-                <button>Comprar</button>
-            </article>
-        </div>
-        <div>
-            <img src="Images/producto5.jpg" alt="Silla de madera">
-        </div>
-        <div class="descripcionProductos">
-            <article>
-                <h3>Silla de madera</h3>
-                <p>Hecha a mano con madera de alta calidad, perfecta para cualquier ambiente.</p>
-                <p>Precio: $50</p>
-                <button>Comprar</button>
-            </article>
-        </div>
-        <div>
-            <img src="Images/producto6.jpg" alt="Silla de madera">
-        </div>
-        <div class="descripcionProductos">
-            <article>
-                <h3>Silla de madera</h3>
-                <p>Hecha a mano con madera de alta calidad, perfecta para cualquier ambiente.</p>
-                <p>Precio: $50</p>
-                <button>Comprar</button>
-            </article>
-        </div>
-        <div>
-            <img src="Images/categoria1.jpg" alt="Silla de madera">
-        </div>
-        <div>
-            <img src="Images/categoria2.jpg" alt="Silla de madera">
-        </div>
-        <div>
-            <img src="Images/categoria3.jpg" alt="Silla de madera">
-        </div>
-        <div>
-            <h2>Categorias</h2>
-            <div>
+        <br>
+    </main>
+    <footer>
+        <div class="contenedorFila">
+            <div class="contenedorColumna">
+                <h3>Categorias</h3>
+
                 <nav>
                     <ul>
                         <li><a href="#">Cocina</a></li>
@@ -120,35 +208,35 @@
                         <li><a href="#">Cochera</a></li>
                         <li><a href="#">Dormitorios</a></li>
                     </ul>
+                </nav>
             </div>
-        </div>
-        <div>
-            <h2>Sobre nosotros</h2>
-            <div>
+            <div class="contenedorColumna">
+                <h3>Sobre nosotros</h3>
                 <nav>
                     <ul>
                         <li><a href="#">Nuestra historia</a></li>
                         <li><a href="#">Misión, Visión y Valores</a></li>
-                        <li><a href="#">Carreras</a></li>
-                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Carrera</a></li>
+                        <li><a href="#">Políticas de privacidad</a></li>
                         <li><a href="#">Terminos del servicio</a></li>
                     </ul>
+                </nav>
             </div>
-        </div>
-        <div>
-            <h2>Soporte</h2>
-            <div>
+            <div class="contenedorColumna">
+                <h3>Soporte</h3>
                 <nav>
                     <ul>
                         <li><a href="#">Preguntas frecuentes</a></li>
-                        <li><a href="#">Ayuda en linea</a></li>
-                        <li><a href="#">Confianza y Seguridad</a></li>
+                        <li><a href="#">Ayuda en línea</a></li>
+                        <li><a href="#">Confianza y seguridad</a></li>
                     </ul>
+                </nav>
             </div>
         </div>
-    </main>
-    <footer>
-        <small>Todos los derechos reservados.<a href="#">Tienda de muebles</a></small>
-</body>
+        <small>&copy; 2025 Todos los derechos reservados. Juan Carlos Gómez Rivera</small>
+    </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+</body>
 </html>
